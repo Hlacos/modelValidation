@@ -6,7 +6,7 @@ It's under development, not recommended for production use!
 
 # Installation
 
-1. add bundle to composer: "hlacos/model_validation": "dev-master"
+1. add bundle to composer: "hlacos/modelValidation": "dev-master"
 2. composer install / update
 3. add service provider to the providers list: 'Hlacos\ModelValidation\ModelValidationServiceProvider'
 
