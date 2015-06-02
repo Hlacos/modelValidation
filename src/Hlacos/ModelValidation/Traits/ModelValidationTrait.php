@@ -2,9 +2,7 @@
 
 trait ModelValidationTrait {
 
-    public $errors = null;
-
-    private $rules = [];
+    public $errors;
 
     public function save(array $options = array())
     {
