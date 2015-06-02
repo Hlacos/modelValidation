@@ -1,5 +1,7 @@
 <?php namespace Hlacos\ModelValidation\Traits;
 
+use Illuminate\Support\Facades\Validator;
+
 trait ModelValidationTrait {
 
     public $errors;
