@@ -4,6 +4,9 @@ namespace Hlacos\ModelValidation;
 
 use Illuminate\Support\ServiceProvider;
 
+use Illuminate\Support\Facades\Validator;
+use \Hlacos\ModelValidation\Validator\ModelValidationValidator;
+
 class ModelValidationServiceProvider extends ServiceProvider {
 
 	/**
@@ -35,7 +38,9 @@ class ModelValidationServiceProvider extends ServiceProvider {
 
 	public function boot()
 	{
-
+		Validator::extendImplicit('relates', function($attribute, $value, $parameters) {
+			return ModelValidationValidator::validateRelates($attribute, $value, $parameters);
+		});
 	}
 
 }
